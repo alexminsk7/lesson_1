@@ -6,20 +6,23 @@ let myMoney = +prompt('Ваш бюджет на месяц?');
 // variable time
 let myTime = prompt('Введите дату в формате YYYY-MM-DD');
 
-// user questions 
-let a = prompt('Введите обязательную статью расходов в этом месяце', '');
-let b = +prompt('Во сколько обойдется?', '');
-
 // object appData
 let appData = {
    moneyData: myMoney,
    timeData: myTime,
-   expenses: {'a' : 'b'},
+   expenses: {},
    optionalExpenses: {},
    income: [],
    savings: false
 };
 
-appData.moneyPerDay = appData.moneyData / 30;
+// user questions 
+let userQuery1 = prompt('Введите обязательную статью расходов в этом месяце', ''),
+   userQuery2 = +prompt('Во сколько обойдется?', ''),
+   userAnswer1 = prompt('Введите обязательную статью расходов в этом месяце', ''),
+   userAnswer2 = +prompt('Во сколько обойдется?', '');
 
-alert('Ежедневный бюджет: ' + appData.moneyPerDay);
+appData.expenses.userQuery1 = userQuery2;
+appData.expenses.userAnswer1 = userAnswer2;
+
+alert(appData.moneyData / 30);
