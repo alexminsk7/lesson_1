@@ -21,9 +21,11 @@ let userQuery1 = prompt('Введите обязательную статью р
    userQuery2 = +prompt('Во сколько обойдется?', ''),
    userAnswer1 = prompt('Введите обязательную статью расходов в этом месяце', ''),
    userAnswer2 = +prompt('Во сколько обойдется?', '');
-   userAnswer2 = +prompt('Во сколько обойдется?', '');
 
-appData.expenses.userQuery1 = userQuery2;
-appData.expenses.userAnswer1 = userAnswer2;
+appData.expenses[userQuery1] = userQuery2;
+appData.expenses[userAnswer1] = userAnswer2;
+console.log(userQuery1);
+console.log(userAnswer2);
+
 
 alert(appData.moneyData / 30);
